@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
             data.forEach(row => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
-                            <td>${index++}</td>
+                            <td class="text-center">${index++}</td>
                             <td>${row.person_name}</td>
                             <td>${row.alamat || 'Data Alamat Belum Tersedia'}</td>
                             <td>${row.hobi || 'Data Hobi Belum Tersedia'}</td>
@@ -103,7 +103,7 @@ function searchData() {
             data.forEach(row => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
-                            <td>${index++}</td>
+                            <td class="text-center">${index++}</td>
                             <td>${row.person_name}</td>
                             <td>${row.alamat || 'Data Alamat Belum Tersedia'}</td>
                             <td>${row.hobi || 'Data Hobi Belum Tersedia'}</td>
