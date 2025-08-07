@@ -14,10 +14,18 @@
 </head>
 
 <body class="p-5">
-    <div class="container-fluid mt-2">
+    <div class="container-fluid w-50 mt-2">
+        <div class="row">
+            <div class="col d-flex justify-content-end">
+                <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#searchData"
+                    data-bs-whatever="@mdo">Search Data</button>
+            </div>
+        </div>
+
         <table class="table table-bordered">
             <thead>
                 <tr>
+                    <th>No</th>
                     <th>Nama</th>
                     <th>Alamat</th>
                     <th>Hobi</th>
@@ -27,10 +35,9 @@
 
             </tbody>
         </table>
+
     </div>
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#searchData"
-        data-bs-whatever="@mdo">Search Data</button>
 
     <div class="modal fade" id="searchData" tabindex="-1" aria-labelledby="searchDataLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -67,9 +74,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const tableBody = document.querySelector('tbody');
             tableBody.innerHTML = '';
 
+            let index = 1;
             data.forEach(row => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
+                            <td>${index++}</td>
                             <td>${row.person_name}</td>
                             <td>${row.alamat || 'Data Alamat Belum Tersedia'}</td>
                             <td>${row.hobi || 'Data Hobi Belum Tersedia'}</td>
@@ -90,9 +99,11 @@ function searchData() {
             const tableBody = document.querySelector('tbody');
             tableBody.innerHTML = '';
 
+            let index = 1;
             data.forEach(row => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
+                            <td>${index++}</td>
                             <td>${row.person_name}</td>
                             <td>${row.alamat || 'Data Alamat Belum Tersedia'}</td>
                             <td>${row.hobi || 'Data Hobi Belum Tersedia'}</td>

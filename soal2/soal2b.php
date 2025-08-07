@@ -19,13 +19,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
     <form action="soal2c.php" method="POST">
-        <div>
+        <div style="margin-bottom: 5px">
             <label for="umut">Umur Anda : </label>
         </div>
-        <div>
+        <div style="margin-bottom: 5px">
             <input type="text" name="umur" required>
         </div>
-
+        
         <button onclick="submitName()">Submit</button>
     </form>
 

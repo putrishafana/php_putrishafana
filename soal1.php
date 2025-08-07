@@ -1,6 +1,7 @@
 <?php
 
-$jml = $_GET['jml'];
+$jml = $_GET['jml'] ?? 4;
+
 echo "<table border=1 cellspacing=0 cellpadding=5 style='border-collapse: collapse; text-align: center; width: 20%; table-layout: fixed;'>\n";
 
 for ($a = $jml; $a > 0; $a--) {

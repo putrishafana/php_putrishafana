@@ -16,13 +16,12 @@ session_start();
 
 <body>
     <form action="soal2b.php" method="POST">
-        <div>
+        <div style="margin-bottom: 5px">
             <label for="nama">Nama Anda : </label>
         </div>
-        <div>
+        <div style="margin-bottom: 5px">
             <input type="text" name="nama" required>
         </div>
-
         <button type="submit">Submit</button>
     </form>
 
